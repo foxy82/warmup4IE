@@ -22,10 +22,22 @@ The library is primary intended to interface the 4IE with home assistant, but ma
 
 Home Assistant
 ---------------
+
 To setup this component, you need to register to warmup first.
 see https://my.warmup.com/login
 
-Then copy the folder `warmup_cc <https://github.com/alex-0103/warmup4IE/blob/master/warmup_cc>`_ to your "*custom_components*" folder in your "*config*" dir.
+Then in your HA config folder...
+
+.. code-block:: sh
+
+  # remove any previous version
+  rm -r ./custom_components/warmup_cc 2>/dev/null
+  git clone https://github.com/foxy82/warmup4IE.git /tmp/warmup4IE
+  mkdir -p ./custom_components/warmup_cc
+  cp -r /tmp/warmup4IE/warmup_cc/*     ./custom_components/warmup_cc
+  # clean up
+  rm -rf /tmp/warmup4IE/
+
 
 Then add to your
 configuration.yaml:
@@ -34,17 +46,11 @@ configuration.yaml:
 
   climate:
     - platform: warmup_cc
-      name: YOUR_DESCRIPTION
       username: YOUR_E_MAIL_ADDRESS
       password: YOUR_PASSWORD
-      location: YOUR_LOCATION_NAME
-      room: YOUR_ROOM_NAME
 
-* **name** (optional): the description of the device, as seen by the user in the front end
 * **username** (required): the username used to login to the warmup web site
 * **password** (required): the password used to login to the warmup web site; may be moved to the secrets.yaml file. See `secrets <https://www.home-assistant.io/docs/configuration/secrets/>`_
-* **location** (required): the location name used in the warmup web site
-* **room** (required): the room name of the device used in the warmup web site
 
 After restarting home assistant, the component will be loaded automatically.
 
@@ -133,3 +139,9 @@ Release Notes
     - override_duration
     - sleep_temperature
     - override_duration_mins
+
+0.1.7
+-----
+
+- initialise using new **services** standards https://developers.home-assistant.io/docs/en/dev_101_services.html 
+
