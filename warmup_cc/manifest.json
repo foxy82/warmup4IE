@@ -1,7 +1,7 @@
 {
   "domain": "warmup_cc",
   "name": "Warmup",
-  "documentation": "https://www.home-assistant.io/components/warmup",
+  "documentation": "https://www.home-assistant.io/components/warmup_cc",
   "dependencies": [],
   "codeowners": [],
   "requirements": []
