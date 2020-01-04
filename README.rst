@@ -26,15 +26,17 @@ Home Assistant
 To setup this component, you need to register to warmup first.
 see https://my.warmup.com/login
 
-Then in your HA config folder...
+Then copy the contents of the warmup_cc subfolder into custom_components 
+in your HA **config** folder, e.g.:
 
 .. code-block:: sh
 
+  cd path/to/your/config
   # remove any previous version
   rm -r ./custom_components/warmup_cc 2>/dev/null
   git clone https://github.com/foxy82/warmup4IE.git /tmp/warmup4IE
   mkdir -p ./custom_components/warmup_cc
-  cp -r /tmp/warmup4IE/warmup_cc/*     ./custom_components/warmup_cc
+  cp -r /tmp/warmup4IE/warmup_cc/* ./custom_components/warmup_cc
   # clean up
   rm -rf /tmp/warmup4IE/
 
