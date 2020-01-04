@@ -11,7 +11,7 @@ from homeassistant.const import (
     PRECISION_HALVES,
     TEMP_CELSIUS,
 )
-DOMAIN = 'warmup'
+DOMAIN = 'warmup_cc'
 
 _LOGGER = logging.getLogger(__name__)
 
