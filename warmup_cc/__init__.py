@@ -1,6 +1,8 @@
 # modelled on https://developers.home-assistant.io/docs/en/dev_101_services.html
 # combined with snippets from https://github.com/foxy82/warmup4IE/blob/update_all_rooms_at_once/warmup_cc/climate.py
 
+import logging
+
 from homeassistant.const import (
     ATTR_ENTITY_ID,
     ATTR_TEMPERATURE,
