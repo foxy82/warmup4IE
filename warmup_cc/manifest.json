@@ -1,8 +1,9 @@
 {
-  "domain": "warmup_cc",
+  "domain": "warmup",
   "name": "Warmup",
-  "documentation": "https://www.home-assistant.io/components/warmup",
+  "documentation": "https://github.com/ha-warmup/warmup/wiki",
   "dependencies": [],
   "codeowners": [],
   "requirements": []
+  "version": "0.1.6"
 }
