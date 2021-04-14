@@ -4,6 +4,6 @@
   "documentation": "https://github.com/ha-warmup/warmup/wiki",
   "dependencies": [],
   "codeowners": [],
-  "requirements": []
+  "requirements": [],
   "version": "0.1.5"
-}
+  }
